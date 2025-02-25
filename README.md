@@ -16,7 +16,7 @@ This project is a convolutional regression neural network designed to find the c
 ## Demo
 
 <p align="center">
-      <img src="" alt="demo gif" height="300px">
+      <img src="https://github.com/denisromanovskii/Regression-conv-model/blob/main/conv_demo.gif" alt="demo gif" height="300px">
 </p>
 
 ## Documentation
