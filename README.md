@@ -11,7 +11,7 @@
 
 ## About
 
-
+This project is a convolutional regression neural network designed to find the center of a square in images. The model utilizes convolutional layers to extract features and then regresses the coordinates of the square’s center. The main goal is to accurately determine the center’s coordinates, which can be useful in various applications such as image processing and computer vision.
 
 ## Demo
 
