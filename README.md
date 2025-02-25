@@ -16,7 +16,7 @@ This project is a convolutional regression neural network designed to find the c
 ## Demo
 
 <p align="center">
-      <img src="https://github.com/denisromanovskii/MNIST-linear-model/blob/main/MNIST_demo.gif" alt="demo gif" height="300px">
+      <img src="" alt="demo gif" height="300px">
 </p>
 
 ## Documentation
@@ -29,4 +29,4 @@ This project is a convolutional regression neural network designed to find the c
 - [Denis Romanovskii](https://github.com/denisromanovskii)
 
 ## License
-Project MNIST-linear-model is destributed under the MIT license.
+Project Regression-conv-model is destributed under the MIT license.
