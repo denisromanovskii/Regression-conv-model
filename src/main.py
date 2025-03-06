@@ -1,16 +1,15 @@
 import sys
 from PyQt6 import QtGui, QtWidgets
 from PyQt6.QtCore import Qt
-from PyQt6.QtWidgets import QVBoxLayout, QWidget, QHBoxLayout, QPushButton
+from PyQt6.QtWidgets import QVBoxLayout, QWidget, QPushButton
 from torchvision.transforms import v2
 import torch
 from model import model
 from PIL import Image, ImageQt
 import PIL
-import torch.nn as nn
 import numpy as np
 
-device = 'cuda' if torch.cuda.is_available() else 'cpu'
+device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
 params = torch.load('convRegression-model-params.pt')
 model.load_state_dict(params)
 

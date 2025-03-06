@@ -29,8 +29,9 @@ class ConvModel(nn.Module):
         out = self.linear_block(x)
         return out
 
-device = 'cuda' if torch.cuda.is_available() else 'cpu'
-model = ConvModel(1, 2).to(device)
+device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
+model = ConvModel(1, 2)
+model = model.to(device)
 loss_func = nn.MSELoss()
 opt = torch.optim.Adam(model.parameters(), lr=0.0001)
 lr_scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(opt, patience=5)

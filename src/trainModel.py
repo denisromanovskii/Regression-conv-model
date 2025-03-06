@@ -12,9 +12,12 @@ lr_list = []
 best_loss = None
 
 # model test
-input = torch.rand([16, 1, 700, 700], dtype=torch.float32)
-out = model(input)
-print(out.shape)
+# print(device)
+# input = torch.rand([16, 1, 64, 64], dtype=torch.float32)
+# input = input.to(device)
+# out = model(input)
+# print(out.shape)
+# exit()
 
 for epoch in range(EPOCHS):
     model.train()
@@ -71,9 +74,11 @@ for epoch in range(EPOCHS):
     lr_list.append(lr)
 
     print(f"Epoch #{epoch+1}/{EPOCHS}, train_loss={mean_train_loss:.3f}, train_acc={avg_train_acc:.3f}. val_loss={mean_val_loss:.3f}, val_acc={avg_val_acc:.3f}, lr={lr:.3f}")
-
+        
     if best_loss is None:
         best_loss = mean_val_loss
+        torch.save(model.state_dict(), 'convRegression-model-params.pt')
+        print(f'Model saved on epoch #{epoch+1}')
 
     if best_loss > mean_val_loss:
         torch.save(model.state_dict(), 'convRegression-model-params.pt')
